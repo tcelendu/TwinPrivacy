@@ -1,0 +1,30 @@
+name: Reproduce and verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproducibility:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run complete validation and regenerate reports
+        run: python reproduce.py
+      - name: Verify retained disclosure receipts
+        run: python verify.py outputs/enhanced_analysis.json outputs/trusted_receipt_anchor.txt
+      - name: Confirm valid Python source
+        run: python -m compileall -q .

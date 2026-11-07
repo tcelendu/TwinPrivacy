@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TwinPrivacy | Reproducible Research Evidence</title>
+<style>
+:root { color-scheme:light; } * {box-sizing:border-box} body {margin:0;background:#f0f3f6;color:#16253c;font:15px/1.65 system-ui,-apple-system,Segoe UI,Arial,sans-serif} main {max-width:1000px;margin:42px auto;background:white;box-shadow:0 18px 56px #1b355019;border-radius:14px;padding:50px 56px} .overline {font-size:12px;letter-spacing:.18em;color:#64758d;font-weight:700;text-transform:uppercase} h1 {font:600 39px/1.1 Georgia,serif;letter-spacing:-.02em;margin:13px 0 14px;color:#13304d} .deck {font-size:17px;color:#54657b;max-width:720px} .rule {height:1px;background:#dbe2ea;margin:30px 0} h2 {font:600 23px Georgia,serif;margin:32px 0 12px} p {margin:10px 0 15px} .cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0} .card {background:#eef3f7;padding:19px;border-radius:10px} .num {font-weight:700;font-size:29px;letter-spacing:-.025em;font-variant-numeric:tabular-nums;color:#13304d} .lbl {font-size:12px;color:#576d83;margin-top:2px} table {border-collapse:collapse;width:100%;font-size:14px;margin:16px 0 25px} th,td {padding:11px 10px;border-bottom:1px solid #dfe5ed;text-align:left;vertical-align:top} th {background:#f1f5f8;color:#44566b} .barblock {padding:18px;background:#f4f7fa;border-radius:10px;margin:16px 0} .track {height:18px;border-radius:30px;background:#dce4ec;overflow:hidden;margin:6px 0 11px} .fill {height:100%;background:#416f89;border-radius:30px} .muted {color:#687b91;font-size:13px} .note {border-left:3px solid #57778b;padding:11px 17px;background:#f4f7f9} footer {margin-top:36px;border-top:1px solid #dbe2ea;padding-top:19px;color:#67788d;font-size:12px} @media(max-width:700px) {main {padding:26px 18px;margin:0;border-radius:0}.cards {grid-template-columns:1fr 1fr}h1 {font-size:32px}}
+</style></head><body><main>
+<div class="overline">TwinPrivacy / Research Evidence / Version 0.6.0</div>
+<h1>Verifying disclosures.<br>Measuring what was revealed.</h1>
+<p class="deck">Reproducible computational evaluation of a recipient-conditioned information-accounting system for recorded structured health-data disclosures.</p>
+<div class="rule"></div>
+<div class="cards"><div class="card"><div class="num">512</div><div class="lbl">Synthetic clinical profiles</div></div><div class="card"><div class="num">4,096</div><div class="lbl">Recorded disclosure events</div></div><div class="card"><div class="num">8,192</div><div class="lbl">Independent numerical comparisons</div></div></div>
+<h2>Evaluation design</h2>
+<p>Four modeled clinical attributes, sixteen weighted profile states, three recipient roles and eight ordered event templates per clinical profile. The cohort and all model parameters are generated or specified for software validation. No patient records were collected or analyzed.</p>
+<h2>Implementation validation</h2>
+<table><thead><tr><th>Prespecified check</th><th>Result</th></tr></thead><tbody>
+<tr><td>Maximum deviation from independently coded finite-state enumerator</td><td>0.000000499 bits</td></tr>
+<tr><td>Within 0.000001-bit tolerance</td><td>Yes</td></tr>
+<tr><td>Repeated disclosures yielding zero additional modeled information</td><td>512 / 512</td></tr>
+<tr><td>Prior-known facts yielding zero additional modeled information</td><td>512 / 512</td></tr>
+<tr><td>Preference flags matching independent rule</td><td>4,096 / 4,096</td></tr>
+</tbody></table>
+<h2>Sensitivity to correlation assumptions</h2>
+<p>Mean absolute modeled change in the probability of chronic kidney disease after diabetes status is disclosed (percentage points). The independent-attribute model retains identical attribute marginals.</p>
+<div class="barblock"><strong>Specified correlated model</strong> <span class="muted">6.5491 pp</span><div class="track"><div class="fill" style="width:58.942%"></div></div><strong>Independent-attribute comparator</strong> <span class="muted">0.0000 pp</span><div class="track"><div class="fill" style="width:0.000%"></div></div><div class="muted">Largest absolute per-event information difference across assumptions: 1.296191 bits. These results show model sensitivity, not empirical predictive superiority.</div></div>
+<h2>Stored-record integrity challenges</h2><table><thead><tr><th>Challenge</th><th>Expected behavior reproduced</th></tr></thead><tbody><tr><td>Alter event attribute</td><td>Observed</td></tr><tr><td>Remove recorded event</td><td>Observed</td></tr><tr><td>Reorder events</td><td>Observed</td></tr><tr><td>Alter analysis model</td><td>Observed</td></tr><tr><td>Recomputed history against original anchor</td><td>Observed</td></tr><tr><td>Rewritten history without external anchor passes</td><td>Observed</td></tr></tbody></table>
+<div class="note"><strong>Critical limitation:</strong> an internally rehashed replacement record can validate without the independently trusted original anchor. Cryptographic receipt integrity alone cannot prove that every data access has been logged, who authored the record, or that sharing was lawful.</div>
+<h2>Scientific positioning</h2><p>The software combines established information-theoretic accounting with recipient-specific state, preference review, a patient-readable report and hash-linked receipts. None of these individual ideas is claimed as a new privacy theorem. An independently demonstrated advance beyond established audit and quantitative-information-flow approaches remains a substantive research goal.</p>
+<p class="muted">Reproduce the evidence with <code>python reproduce.py</code>; see docs/VALIDATION_PROTOCOL.md and docs/RESEARCH_NOVELTY.md. Functional computational verification is not clinical validation.</p>
+<footer>TwinPrivacy · Open-source computational methods · Research evidence generated deterministically from the repository</footer>
+</main></body></html>

@@ -1,0 +1,22 @@
+{
+  "context_only_columns": [
+    "age_years",
+    "hba1c_percent",
+    "egfr_mL_min_1_73m2",
+    "fev1_fvc_ratio",
+    "medication_allergy_label"
+  ],
+  "dataset": "TwinPrivacy synthetic clinical profiles",
+  "generation_method": "Seeded weighted sampling of the declared 16-state joint model; age and illustrative clinical measurements generated from explicit conditional ranges",
+  "limitations": "Clinical context variables are rule-generated and not clinically validated; association structure is specified rather than estimated.",
+  "model_source": "examples/privacy_verification_scenario.json",
+  "modeled_attributes": [
+    "diabetes",
+    "chronic_kidney_disease",
+    "asthma",
+    "drug_allergy"
+  ],
+  "number_of_records": 512,
+  "provenance": "Entirely synthetic; no actual patients or patient-derived records",
+  "seed": 20261107
+}

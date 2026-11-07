@@ -1,0 +1,63 @@
+{
+  "cohort_provenance": "Generated from an author-specified 16-state joint distribution; not derived from patients or observational data",
+  "correlation_sensitivity": {
+    "absolute_ckd_probability_shift_after_diabetes_mean_independent_pp": 0.0,
+    "absolute_ckd_probability_shift_after_diabetes_mean_joint_pp": 6.549063,
+    "ckd_probability_shifts_independently_checked": 512,
+    "interpretation": "Sensitivity to modeling assumptions, not empirical superiority or a validated inference attack.",
+    "max_absolute_event_bit_difference_joint_vs_independent": 1.296191,
+    "mean_absolute_event_bit_difference_joint_vs_independent": 0.081557
+  },
+  "distinct_profile_states_represented": 16,
+  "event_count": 4096,
+  "independent_oracle": {
+    "all_within_tolerance": true,
+    "comparison_values": 8192,
+    "maximum_absolute_difference_bits": 4.99e-07,
+    "mean_absolute_difference_bits": 2.12e-07,
+    "tolerance_bits": 1e-06
+  },
+  "model_provenance": "Repository-specified weighted joint profile distribution; not epidemiological prevalence estimates",
+  "possible_profile_states": 16,
+  "preference_flag_validation": {
+    "agreement": true,
+    "exact_match_events": 4096,
+    "flagged_by_engine": 1024,
+    "flagged_by_independent_rule": 1024,
+    "total_events": 4096
+  },
+  "receipt_integrity_challenges": {
+    "alter_analysis_model": true,
+    "alter_event_attribute": true,
+    "recomputed_history_against_original_anchor": true,
+    "remove_recorded_event": true,
+    "reorder_events": true,
+    "rewritten_history_without_external_anchor_passes": true
+  },
+  "recipient_prior_knowledge": {
+    "already_known_events_evaluated": 512,
+    "incremental_zero_bits": 512,
+    "naive_event_count_would_count": 512
+  },
+  "repeated_disclosure": {
+    "duplicate_events_evaluated": 512,
+    "incremental_zero_bits": 512,
+    "naive_event_count_would_count": 512
+  },
+  "scope": {
+    "analysis_units": "Recorded structured attribute disclosure events",
+    "not_covered": [
+      "clinical generalizability",
+      "real EHR integration",
+      "free-text extraction",
+      "complete event capture",
+      "real adversarial inference",
+      "ground-truth population probabilities",
+      "regulatory compliance"
+    ],
+    "validation_type": "In-model computational validation with independent finite-state enumeration"
+  },
+  "study": "TwinPrivacy deterministic synthetic-profile validation",
+  "synthetic_generator_seed": 20261107,
+  "synthetic_profile_count": 512
+}
