@@ -1,0 +1,263 @@
+{
+  "scenario_id": "TP-DH-2026-01",
+  "patient_reference": "TP-P001",
+  "description": "Patient-verifiable clinical attribute sharing across care, research, and medication-safety services",
+  "model_provenance": "Illustrative joint profile distribution specified for reproducible software evaluation; not epidemiological prevalence estimates.",
+  "attribute_labels": {
+    "diabetes": "Type 2 diabetes status",
+    "chronic_kidney_disease": "Chronic kidney disease status",
+    "asthma": "Asthma status",
+    "drug_allergy": "Recorded medication allergy status"
+  },
+  "actual_profile": {
+    "diabetes": true,
+    "chronic_kidney_disease": true,
+    "asthma": true,
+    "drug_allergy": false
+  },
+  "population_model": [
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": false,
+        "asthma": false,
+        "drug_allergy": false
+      },
+      "weight": 0.54711384
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": false,
+        "asthma": false,
+        "drug_allergy": true
+      },
+      "weight": 0.05411016
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": false,
+        "asthma": true,
+        "drug_allergy": false
+      },
+      "weight": 0.10030176
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": false,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "weight": 0.03167424
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": true,
+        "asthma": false,
+        "drug_allergy": false
+      },
+      "weight": 0.03492216
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": true,
+        "asthma": false,
+        "drug_allergy": true
+      },
+      "weight": 0.00345384
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": true,
+        "asthma": true,
+        "drug_allergy": false
+      },
+      "weight": 0.00640224
+    },
+    {
+      "profile": {
+        "diabetes": false,
+        "chronic_kidney_disease": true,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "weight": 0.00202176
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": false,
+        "asthma": false,
+        "drug_allergy": false
+      },
+      "weight": 0.123123
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": false,
+        "asthma": false,
+        "drug_allergy": true
+      },
+      "weight": 0.012177
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": false,
+        "asthma": true,
+        "drug_allergy": false
+      },
+      "weight": 0.022572
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": false,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "weight": 0.007128
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": true,
+        "asthma": false,
+        "drug_allergy": false
+      },
+      "weight": 0.041041
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": true,
+        "asthma": false,
+        "drug_allergy": true
+      },
+      "weight": 0.004059
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": true,
+        "asthma": true,
+        "drug_allergy": false
+      },
+      "weight": 0.007524
+    },
+    {
+      "profile": {
+        "diabetes": true,
+        "chronic_kidney_disease": true,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "weight": 0.002376
+    }
+  ],
+  "recipient_prior": {
+    "clinical_care_team": {
+      "diabetes": true
+    },
+    "research_analytics": {},
+    "medication_safety_service": {
+      "drug_allergy": false
+    }
+  },
+  "recipient_preferences": {
+    "clinical_care_team": [
+      "diabetes",
+      "chronic_kidney_disease",
+      "asthma",
+      "drug_allergy"
+    ],
+    "research_analytics": [
+      "diabetes",
+      "asthma"
+    ],
+    "medication_safety_service": [
+      "drug_allergy",
+      "asthma"
+    ]
+  },
+  "releases": [
+    {
+      "event_id": "TP-E001",
+      "recipient": "research_analytics",
+      "facts": {
+        "diabetes": true
+      },
+      "purpose": "Quality-improvement cohort stratification",
+      "channel": "Structured diagnosis extract"
+    },
+    {
+      "event_id": "TP-E002",
+      "recipient": "research_analytics",
+      "facts": {
+        "diabetes": true
+      },
+      "purpose": "Repeat cohort extract",
+      "channel": "Structured diagnosis extract"
+    },
+    {
+      "event_id": "TP-E003",
+      "recipient": "clinical_care_team",
+      "facts": {
+        "chronic_kidney_disease": true
+      },
+      "purpose": "Renal medication review",
+      "channel": "Care coordination record"
+    },
+    {
+      "event_id": "TP-E004",
+      "recipient": "research_analytics",
+      "facts": {
+        "chronic_kidney_disease": true
+      },
+      "purpose": "Renal outcome analysis",
+      "channel": "Structured diagnosis extract"
+    },
+    {
+      "event_id": "TP-E005",
+      "recipient": "medication_safety_service",
+      "facts": {
+        "asthma": true
+      },
+      "purpose": "Medication reconciliation",
+      "channel": "Pharmacy integration"
+    },
+    {
+      "event_id": "TP-E006",
+      "recipient": "research_analytics",
+      "facts": {
+        "asthma": true
+      },
+      "purpose": "Respiratory subgroup analysis",
+      "channel": "Structured diagnosis extract"
+    },
+    {
+      "event_id": "TP-E007",
+      "recipient": "research_analytics",
+      "facts": {
+        "drug_allergy": false
+      },
+      "purpose": "Medication exposure validation",
+      "channel": "Structured allergy extract"
+    },
+    {
+      "event_id": "TP-E008",
+      "recipient": "clinical_care_team",
+      "facts": {
+        "diabetes": true
+      },
+      "purpose": "Continuity-of-care summary",
+      "channel": "Care coordination record"
+    }
+  ]
+}

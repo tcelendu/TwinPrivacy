@@ -1,0 +1,251 @@
+{
+  "series": "TwinPrivacy structured clinical case analyses",
+  "analyses": [
+    {
+      "case_id": "TP-CL-01",
+      "project": "TwinPrivacy",
+      "version": "0.4.0",
+      "measurement": "recipient-specific information gain (bits)",
+      "candidate_profile_count": 8,
+      "events": [
+        {
+          "sequence": 1,
+          "recipient": "clinical_researcher",
+          "disclosed_attributes": {
+            "asthma": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receipt_sha256": "97bee05b1fabdf312f2ee252046034000f0e6fc87887bcb080551c661b7a1816"
+        },
+        {
+          "sequence": 2,
+          "recipient": "clinical_researcher",
+          "disclosed_attributes": {
+            "asthma": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "97bee05b1fabdf312f2ee252046034000f0e6fc87887bcb080551c661b7a1816",
+          "receipt_sha256": "0094c69f8c20110147c856831e9fd419695ec9f3cafd5da62fd2980b0e4f7987"
+        },
+        {
+          "sequence": 3,
+          "recipient": "clinical_researcher",
+          "disclosed_attributes": {
+            "drug_allergy": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 2.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "0094c69f8c20110147c856831e9fd419695ec9f3cafd5da62fd2980b0e4f7987",
+          "receipt_sha256": "cb6afd0e0cd07712f71864d93a09ab277cee5a61f7285024a3996d3e3a9adf0a"
+        },
+        {
+          "sequence": 4,
+          "recipient": "respiratory_clinician",
+          "disclosed_attributes": {
+            "asthma": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 0.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "cb6afd0e0cd07712f71864d93a09ab277cee5a61f7285024a3996d3e3a9adf0a",
+          "receipt_sha256": "4fb0ae81d0698ebe21753093ffeb5df4b772058ed9a24ef213a3c9bcdc22a54a"
+        },
+        {
+          "sequence": 5,
+          "recipient": "respiratory_clinician",
+          "disclosed_attributes": {
+            "drug_allergy": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "4fb0ae81d0698ebe21753093ffeb5df4b772058ed9a24ef213a3c9bcdc22a54a",
+          "receipt_sha256": "dc143fa97e193c33a3b0193f844572fc5aabc7f16540570e25a5d4045919cec0"
+        }
+      ],
+      "final_receipt_sha256": "dc143fa97e193c33a3b0193f844572fc5aabc7f16540570e25a5d4045919cec0"
+    },
+    {
+      "case_id": "TP-CL-02",
+      "project": "TwinPrivacy",
+      "version": "0.4.0",
+      "measurement": "recipient-specific information gain (bits)",
+      "candidate_profile_count": 8,
+      "events": [
+        {
+          "sequence": 1,
+          "recipient": "research_analytics",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receipt_sha256": "b5ca9b31d98aa71060c80db6da941723baeb52fde24e2a1f91a8db6af9fe2fa0"
+        },
+        {
+          "sequence": 2,
+          "recipient": "diabetes_clinician",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 0.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "b5ca9b31d98aa71060c80db6da941723baeb52fde24e2a1f91a8db6af9fe2fa0",
+          "receipt_sha256": "d9501f2d18d5f1b2eb515533e4194fb22e106f8ee0966ba4e0b7fd66c70ea708"
+        },
+        {
+          "sequence": 3,
+          "recipient": "research_analytics",
+          "disclosed_attributes": {
+            "asthma": false
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 2.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "d9501f2d18d5f1b2eb515533e4194fb22e106f8ee0966ba4e0b7fd66c70ea708",
+          "receipt_sha256": "147c7f893993abb89526ea49aa694d84bfe0b0b6cb4a87e0cf97fbaae5d94c4f"
+        },
+        {
+          "sequence": 4,
+          "recipient": "research_analytics",
+          "disclosed_attributes": {
+            "drug_allergy": false
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 3.0,
+          "remaining_candidate_profiles": 1,
+          "previous_receipt_sha256": "147c7f893993abb89526ea49aa694d84bfe0b0b6cb4a87e0cf97fbaae5d94c4f",
+          "receipt_sha256": "f6aa5c122abeee61f22f78d96c440b83f6c7aef0b119e6b576656ab39b4a706f"
+        },
+        {
+          "sequence": 5,
+          "recipient": "diabetes_clinician",
+          "disclosed_attributes": {
+            "drug_allergy": false
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "f6aa5c122abeee61f22f78d96c440b83f6c7aef0b119e6b576656ab39b4a706f",
+          "receipt_sha256": "19cc94bf1d777a14c8d9051f1765b4529999d6e278352ddd4a230531df504715"
+        },
+        {
+          "sequence": 6,
+          "recipient": "research_analytics",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 3.0,
+          "remaining_candidate_profiles": 1,
+          "previous_receipt_sha256": "19cc94bf1d777a14c8d9051f1765b4529999d6e278352ddd4a230531df504715",
+          "receipt_sha256": "eb81b21a565bfd6083920e1dfe76c493d43d67ce78755686f8ace93afefc9404"
+        }
+      ],
+      "final_receipt_sha256": "eb81b21a565bfd6083920e1dfe76c493d43d67ce78755686f8ace93afefc9404"
+    },
+    {
+      "case_id": "TP-CL-03",
+      "project": "TwinPrivacy",
+      "version": "0.4.0",
+      "measurement": "recipient-specific information gain (bits)",
+      "candidate_profile_count": 8,
+      "events": [
+        {
+          "sequence": 1,
+          "recipient": "pharmacy_service",
+          "disclosed_attributes": {
+            "drug_allergy": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 0.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receipt_sha256": "ab7fbdcbab06eaa28159010b8f7c799b8aa2e6c2448a11b6f42259ac1a163803"
+        },
+        {
+          "sequence": 2,
+          "recipient": "pharmacy_service",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "ab7fbdcbab06eaa28159010b8f7c799b8aa2e6c2448a11b6f42259ac1a163803",
+          "receipt_sha256": "0ead418741c3ea935586f52dc22599f7328380c905a09af5812ce92c1ef5d471"
+        },
+        {
+          "sequence": 3,
+          "recipient": "primary_care",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 0.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "0ead418741c3ea935586f52dc22599f7328380c905a09af5812ce92c1ef5d471",
+          "receipt_sha256": "fdbda34bcdebe319a0d2a89981f655adfdc5ec893a567423f552865f5fd0689a"
+        },
+        {
+          "sequence": 4,
+          "recipient": "outcomes_analytics",
+          "disclosed_attributes": {
+            "diabetes": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 4,
+          "previous_receipt_sha256": "fdbda34bcdebe319a0d2a89981f655adfdc5ec893a567423f552865f5fd0689a",
+          "receipt_sha256": "a5898f2731839b2a8121981b21b4390f3bbdbc5eccb208e2915e5633a4af3292"
+        },
+        {
+          "sequence": 5,
+          "recipient": "outcomes_analytics",
+          "disclosed_attributes": {
+            "asthma": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 2.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "a5898f2731839b2a8121981b21b4390f3bbdbc5eccb208e2915e5633a4af3292",
+          "receipt_sha256": "bfac20d9a93bb53cb0ca73afc8debaba1ecd0735565d0d2767696ea864c28bb3"
+        },
+        {
+          "sequence": 6,
+          "recipient": "outcomes_analytics",
+          "disclosed_attributes": {
+            "asthma": true
+          },
+          "incremental_information_bits": 0.0,
+          "cumulative_information_bits": 2.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "bfac20d9a93bb53cb0ca73afc8debaba1ecd0735565d0d2767696ea864c28bb3",
+          "receipt_sha256": "568a56dfc8fc5f53cf382dc6ba8f6ba39a55dae7b293b995e18aa7462fee5bc3"
+        },
+        {
+          "sequence": 7,
+          "recipient": "primary_care",
+          "disclosed_attributes": {
+            "drug_allergy": true
+          },
+          "incremental_information_bits": 1.0,
+          "cumulative_information_bits": 1.0,
+          "remaining_candidate_profiles": 2,
+          "previous_receipt_sha256": "568a56dfc8fc5f53cf382dc6ba8f6ba39a55dae7b293b995e18aa7462fee5bc3",
+          "receipt_sha256": "bfed18ef3a912a88c2ebff13e46772dc55af44a645f1a121dc18da755833b971"
+        }
+      ],
+      "final_receipt_sha256": "bfed18ef3a912a88c2ebff13e46772dc55af44a645f1a121dc18da755833b971"
+    }
+  ]
+}

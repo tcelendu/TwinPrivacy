@@ -1,0 +1,458 @@
+{
+  "analysis_basis": "weighted joint-profile distribution",
+  "analysis_context": {
+    "actual_profile": {
+      "asthma": true,
+      "chronic_kidney_disease": true,
+      "diabetes": true,
+      "drug_allergy": false
+    },
+    "attribute_labels": {
+      "asthma": "Asthma status",
+      "chronic_kidney_disease": "Chronic kidney disease status",
+      "diabetes": "Type 2 diabetes status",
+      "drug_allergy": "Recorded medication allergy status"
+    },
+    "patient_reference": "TP-P001",
+    "population_model": [
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": false,
+          "diabetes": false,
+          "drug_allergy": false
+        },
+        "weight": 0.54711384
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": false,
+          "diabetes": false,
+          "drug_allergy": true
+        },
+        "weight": 0.05411016
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": false,
+          "diabetes": false,
+          "drug_allergy": false
+        },
+        "weight": 0.10030176
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": false,
+          "diabetes": false,
+          "drug_allergy": true
+        },
+        "weight": 0.03167424
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": true,
+          "diabetes": false,
+          "drug_allergy": false
+        },
+        "weight": 0.03492216
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": true,
+          "diabetes": false,
+          "drug_allergy": true
+        },
+        "weight": 0.00345384
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": true,
+          "diabetes": false,
+          "drug_allergy": false
+        },
+        "weight": 0.00640224
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": true,
+          "diabetes": false,
+          "drug_allergy": true
+        },
+        "weight": 0.00202176
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": false,
+          "diabetes": true,
+          "drug_allergy": false
+        },
+        "weight": 0.123123
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": false,
+          "diabetes": true,
+          "drug_allergy": true
+        },
+        "weight": 0.012177
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": false,
+          "diabetes": true,
+          "drug_allergy": false
+        },
+        "weight": 0.022572
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": false,
+          "diabetes": true,
+          "drug_allergy": true
+        },
+        "weight": 0.007128
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": true,
+          "diabetes": true,
+          "drug_allergy": false
+        },
+        "weight": 0.041041
+      },
+      {
+        "profile": {
+          "asthma": false,
+          "chronic_kidney_disease": true,
+          "diabetes": true,
+          "drug_allergy": true
+        },
+        "weight": 0.004059
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": true,
+          "diabetes": true,
+          "drug_allergy": false
+        },
+        "weight": 0.007524
+      },
+      {
+        "profile": {
+          "asthma": true,
+          "chronic_kidney_disease": true,
+          "diabetes": true,
+          "drug_allergy": true
+        },
+        "weight": 0.002376
+      }
+    ],
+    "recipient_preferences": {
+      "clinical_care_team": [
+        "diabetes",
+        "chronic_kidney_disease",
+        "asthma",
+        "drug_allergy"
+      ],
+      "medication_safety_service": [
+        "drug_allergy",
+        "asthma"
+      ],
+      "research_analytics": [
+        "diabetes",
+        "asthma"
+      ]
+    },
+    "recipient_prior": {
+      "clinical_care_team": {
+        "diabetes": true
+      },
+      "medication_safety_service": {
+        "drug_allergy": false
+      },
+      "research_analytics": {}
+    },
+    "scenario_id": "TP-DH-2026-01"
+  },
+  "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+  "attribute_labels": {
+    "asthma": "Asthma status",
+    "chronic_kidney_disease": "Chronic kidney disease status",
+    "diabetes": "Type 2 diabetes status",
+    "drug_allergy": "Recorded medication allergy status"
+  },
+  "event_count": 8,
+  "events": [
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Structured diagnosis extract",
+      "cumulative_information_bits": 2.184425,
+      "disclosed_attributes": {
+        "diabetes": true
+      },
+      "event_id": "TP-E001",
+      "incremental_information_bits": 2.184425,
+      "model_implied_probability_shifts": [
+        {
+          "attribute": "chronic_kidney_disease",
+          "percentage_point_change": 14.82,
+          "probability_after": 0.25,
+          "probability_before": 0.1018,
+          "reference_value": true
+        }
+      ],
+      "newly_declared_attributes": [
+        "diabetes"
+      ],
+      "posterior_entropy_after_bits": 1.992368,
+      "posterior_entropy_before_bits": 2.375145,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "purpose": "Quality-improvement cohort stratification",
+      "receipt_sha256": "8e3ead66c03f486574bf74ec392b197f3aaef4aedcaa203c3157cc4815775cd5",
+      "recipient": "research_analytics",
+      "sequence": 1,
+      "supported_candidate_profiles_after": 8,
+      "supported_candidate_profiles_before": 16
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Structured diagnosis extract",
+      "cumulative_information_bits": 2.184425,
+      "disclosed_attributes": {
+        "diabetes": true
+      },
+      "event_id": "TP-E002",
+      "incremental_information_bits": 0.0,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [],
+      "posterior_entropy_after_bits": 1.992368,
+      "posterior_entropy_before_bits": 1.992368,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "8e3ead66c03f486574bf74ec392b197f3aaef4aedcaa203c3157cc4815775cd5",
+      "purpose": "Repeat cohort extract",
+      "receipt_sha256": "bd4fd2a59eb41e5c2d232abe7deba7deccb872afb6d779323ac3edb573fc5a0a",
+      "recipient": "research_analytics",
+      "sequence": 2,
+      "supported_candidate_profiles_after": 8,
+      "supported_candidate_profiles_before": 8
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Care coordination record",
+      "cumulative_information_bits": 2.0,
+      "disclosed_attributes": {
+        "chronic_kidney_disease": true
+      },
+      "event_id": "TP-E003",
+      "incremental_information_bits": 2.0,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [
+        "chronic_kidney_disease"
+      ],
+      "posterior_entropy_after_bits": 1.18109,
+      "posterior_entropy_before_bits": 1.992368,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "bd4fd2a59eb41e5c2d232abe7deba7deccb872afb6d779323ac3edb573fc5a0a",
+      "purpose": "Renal medication review",
+      "receipt_sha256": "6ea29e00467a9c20d6924530eeecb572cd2a4566669c05fe65c7aea6d0ba5bcc",
+      "recipient": "clinical_care_team",
+      "sequence": 3,
+      "supported_candidate_profiles_after": 4,
+      "supported_candidate_profiles_before": 8
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [
+        "chronic_kidney_disease"
+      ],
+      "channel": "Structured diagnosis extract",
+      "cumulative_information_bits": 4.184425,
+      "disclosed_attributes": {
+        "chronic_kidney_disease": true
+      },
+      "event_id": "TP-E004",
+      "incremental_information_bits": 2.0,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [
+        "chronic_kidney_disease"
+      ],
+      "posterior_entropy_after_bits": 1.18109,
+      "posterior_entropy_before_bits": 1.992368,
+      "preference_status": "review",
+      "previous_receipt_sha256": "6ea29e00467a9c20d6924530eeecb572cd2a4566669c05fe65c7aea6d0ba5bcc",
+      "purpose": "Renal outcome analysis",
+      "receipt_sha256": "b1a5a19d41a609e80ec65940125455a281a788d1faa93efc09d01743c87e5e88",
+      "recipient": "research_analytics",
+      "sequence": 4,
+      "supported_candidate_profiles_after": 4,
+      "supported_candidate_profiles_before": 8
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Pharmacy integration",
+      "cumulative_information_bits": 2.690345,
+      "disclosed_attributes": {
+        "asthma": true
+      },
+      "event_id": "TP-E005",
+      "incremental_information_bits": 2.690345,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [
+        "asthma"
+      ],
+      "posterior_entropy_after_bits": 1.194056,
+      "posterior_entropy_before_bits": 1.816088,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "b1a5a19d41a609e80ec65940125455a281a788d1faa93efc09d01743c87e5e88",
+      "purpose": "Medication reconciliation",
+      "receipt_sha256": "af6cd44c482cf5a7897235cdadb48f8f3fad819b71ce13e4eab065406fd320a1",
+      "recipient": "medication_safety_service",
+      "sequence": 5,
+      "supported_candidate_profiles_after": 4,
+      "supported_candidate_profiles_before": 8
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Structured diagnosis extract",
+      "cumulative_information_bits": 6.658356,
+      "disclosed_attributes": {
+        "asthma": true
+      },
+      "event_id": "TP-E006",
+      "incremental_information_bits": 2.473931,
+      "model_implied_probability_shifts": [
+        {
+          "attribute": "drug_allergy",
+          "percentage_point_change": -12.3,
+          "probability_after": 0.76,
+          "probability_before": 0.883,
+          "reference_value": false
+        }
+      ],
+      "newly_declared_attributes": [
+        "asthma"
+      ],
+      "posterior_entropy_after_bits": 0.79504,
+      "posterior_entropy_before_bits": 1.18109,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "af6cd44c482cf5a7897235cdadb48f8f3fad819b71ce13e4eab065406fd320a1",
+      "purpose": "Respiratory subgroup analysis",
+      "receipt_sha256": "ca16f8efcabda637d3ff53d5c367df64f4ec421a865b65640cac5733a05aeb58",
+      "recipient": "research_analytics",
+      "sequence": 6,
+      "supported_candidate_profiles_after": 2,
+      "supported_candidate_profiles_before": 4
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [
+        "drug_allergy"
+      ],
+      "channel": "Structured allergy extract",
+      "cumulative_information_bits": 7.054284,
+      "disclosed_attributes": {
+        "drug_allergy": false
+      },
+      "event_id": "TP-E007",
+      "incremental_information_bits": 0.395929,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [
+        "drug_allergy"
+      ],
+      "posterior_entropy_after_bits": -0.0,
+      "posterior_entropy_before_bits": 0.79504,
+      "preference_status": "review",
+      "previous_receipt_sha256": "ca16f8efcabda637d3ff53d5c367df64f4ec421a865b65640cac5733a05aeb58",
+      "purpose": "Medication exposure validation",
+      "receipt_sha256": "794df2d971ece997c59fe1f187dd41218202256528996d3b60c8a47155574e4c",
+      "recipient": "research_analytics",
+      "sequence": 7,
+      "supported_candidate_profiles_after": 1,
+      "supported_candidate_profiles_before": 2
+    },
+    {
+      "analysis_context_sha256": "8c3f50e12f5e320ba870ee89a92a1ac36b2dc060bc4721cebc70256b75707421",
+      "attributes_outside_preferences": [],
+      "channel": "Care coordination record",
+      "cumulative_information_bits": 2.0,
+      "disclosed_attributes": {
+        "diabetes": true
+      },
+      "event_id": "TP-E008",
+      "incremental_information_bits": 0.0,
+      "model_implied_probability_shifts": [],
+      "newly_declared_attributes": [],
+      "posterior_entropy_after_bits": 1.18109,
+      "posterior_entropy_before_bits": 1.18109,
+      "preference_status": "within_preferences",
+      "previous_receipt_sha256": "794df2d971ece997c59fe1f187dd41218202256528996d3b60c8a47155574e4c",
+      "purpose": "Continuity-of-care summary",
+      "receipt_sha256": "d2a53342e8ef11b30335196e96b2e081e755730fa191df530712da4d84d05797",
+      "recipient": "clinical_care_team",
+      "sequence": 8,
+      "supported_candidate_profiles_after": 4,
+      "supported_candidate_profiles_before": 4
+    }
+  ],
+  "final_receipt_sha256": "d2a53342e8ef11b30335196e96b2e081e755730fa191df530712da4d84d05797",
+  "measure": "conditional pointwise disclosure information (bits)",
+  "patient_reference": "TP-P001",
+  "population_profile_count": 16,
+  "project": "TwinPrivacy",
+  "recipient_summary": [
+    {
+      "attributes_known_after_events": [
+        "chronic_kidney_disease",
+        "diabetes"
+      ],
+      "cumulative_information_bits": 2.0,
+      "event_count": 2,
+      "events_for_review": 0,
+      "recipient": "clinical_care_team"
+    },
+    {
+      "attributes_known_after_events": [
+        "asthma",
+        "drug_allergy"
+      ],
+      "cumulative_information_bits": 2.690345,
+      "event_count": 1,
+      "events_for_review": 0,
+      "recipient": "medication_safety_service"
+    },
+    {
+      "attributes_known_after_events": [
+        "asthma",
+        "chronic_kidney_disease",
+        "diabetes",
+        "drug_allergy"
+      ],
+      "cumulative_information_bits": 7.054284,
+      "event_count": 5,
+      "events_for_review": 2,
+      "recipient": "research_analytics"
+    }
+  ],
+  "report_sha256": "54c06f530d9bbdb24e97826d201bd9297dd77bede3d71794ebaf55ae97ebde0d",
+  "scenario_id": "TP-DH-2026-01",
+  "version": "0.6.0"
+}

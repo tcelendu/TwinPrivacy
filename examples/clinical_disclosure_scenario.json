@@ -1,0 +1,47 @@
+{
+  "scenario_id": "TP-001",
+  "description": "Structured clinical disclosure sequence for reproducible testing",
+  "actual_profile": {
+    "diabetes": false,
+    "asthma": true,
+    "drug_allergy": true
+  },
+  "recipient_prior": {
+    "clinician": {
+      "asthma": true
+    },
+    "researcher": {}
+  },
+  "releases": [
+    {
+      "recipient": "researcher",
+      "facts": {
+        "asthma": true
+      }
+    },
+    {
+      "recipient": "researcher",
+      "facts": {
+        "asthma": true
+      }
+    },
+    {
+      "recipient": "researcher",
+      "facts": {
+        "drug_allergy": true
+      }
+    },
+    {
+      "recipient": "clinician",
+      "facts": {
+        "asthma": true
+      }
+    },
+    {
+      "recipient": "clinician",
+      "facts": {
+        "drug_allergy": true
+      }
+    }
+  ]
+}

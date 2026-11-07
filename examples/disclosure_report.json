@@ -1,0 +1,69 @@
+{
+  "project": "TwinPrivacy",
+  "version": "0.2.1",
+  "measurement": "recipient-specific information gain (bits)",
+  "candidate_profile_count": 8,
+  "events": [
+    {
+      "sequence": 1,
+      "recipient": "researcher",
+      "disclosed_attributes": {
+        "asthma": true
+      },
+      "incremental_information_bits": 1.0,
+      "cumulative_information_bits": 1.0,
+      "remaining_candidate_profiles": 4,
+      "previous_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "receipt_sha256": "8f53b4875df6c2dd971919ad3dd632d8a07bb692271e50576ee50658cd1e81a0"
+    },
+    {
+      "sequence": 2,
+      "recipient": "researcher",
+      "disclosed_attributes": {
+        "asthma": true
+      },
+      "incremental_information_bits": 0.0,
+      "cumulative_information_bits": 1.0,
+      "remaining_candidate_profiles": 4,
+      "previous_receipt_sha256": "8f53b4875df6c2dd971919ad3dd632d8a07bb692271e50576ee50658cd1e81a0",
+      "receipt_sha256": "eb11ccb322a56ba1a281b165428daecb5fafff60867381f837d3fade84229365"
+    },
+    {
+      "sequence": 3,
+      "recipient": "researcher",
+      "disclosed_attributes": {
+        "drug_allergy": true
+      },
+      "incremental_information_bits": 1.0,
+      "cumulative_information_bits": 2.0,
+      "remaining_candidate_profiles": 2,
+      "previous_receipt_sha256": "eb11ccb322a56ba1a281b165428daecb5fafff60867381f837d3fade84229365",
+      "receipt_sha256": "9eeece303ba452eae6bec2d26d6052c36199a3706dc45b74dbdc71c4ed38186e"
+    },
+    {
+      "sequence": 4,
+      "recipient": "clinician",
+      "disclosed_attributes": {
+        "asthma": true
+      },
+      "incremental_information_bits": 0.0,
+      "cumulative_information_bits": 0.0,
+      "remaining_candidate_profiles": 4,
+      "previous_receipt_sha256": "9eeece303ba452eae6bec2d26d6052c36199a3706dc45b74dbdc71c4ed38186e",
+      "receipt_sha256": "bbf975b98aca4061eea4144e9dbad17bf12a6f6ad7e0da5cdbfbf575754afa60"
+    },
+    {
+      "sequence": 5,
+      "recipient": "clinician",
+      "disclosed_attributes": {
+        "drug_allergy": true
+      },
+      "incremental_information_bits": 1.0,
+      "cumulative_information_bits": 1.0,
+      "remaining_candidate_profiles": 2,
+      "previous_receipt_sha256": "bbf975b98aca4061eea4144e9dbad17bf12a6f6ad7e0da5cdbfbf575754afa60",
+      "receipt_sha256": "f6e64c4fd724034f77da7197eba3b5813a830fa94e9f33e1db86a4bfc12aff0a"
+    }
+  ],
+  "final_receipt_sha256": "f6e64c4fd724034f77da7197eba3b5813a830fa94e9f33e1db86a4bfc12aff0a"
+}

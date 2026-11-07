@@ -1,0 +1,293 @@
+{
+  "series": "TwinPrivacy structured clinical case analyses",
+  "cases": [
+    {
+      "case_id": "TP-CL-01",
+      "case_title": "Asthma and antimicrobial allergy in a shared-care pathway",
+      "actual_profile": {
+        "diabetes": false,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "recipient_prior": {
+        "respiratory_clinician": {
+          "asthma": true
+        },
+        "clinical_researcher": {}
+      },
+      "releases": [
+        {
+          "recipient": "clinical_researcher",
+          "facts": {
+            "asthma": true
+          }
+        },
+        {
+          "recipient": "clinical_researcher",
+          "facts": {
+            "asthma": true
+          }
+        },
+        {
+          "recipient": "clinical_researcher",
+          "facts": {
+            "drug_allergy": true
+          }
+        },
+        {
+          "recipient": "respiratory_clinician",
+          "facts": {
+            "asthma": true
+          }
+        },
+        {
+          "recipient": "respiratory_clinician",
+          "facts": {
+            "drug_allergy": true
+          }
+        }
+      ],
+      "clinical_summary": {
+        "referral_setting": "Respiratory outpatient service with shared prescribing and research reporting",
+        "index_visit": "2026-03-12",
+        "history": "Seven-year history of episodic wheeze, nocturnal cough and variable exertional breathlessness, with symptom deterioration during the preceding six weeks. She reported generalized urticaria approximately 30 minutes after starting amoxicillin for pharyngitis four years earlier; the reaction resolved after treatment without documented circulatory or respiratory compromise.",
+        "medication_history": "Maintenance inhaled corticosteroid/formoterol; intermittent reliever use. Amoxicillin avoided pending formal allergy assessment.",
+        "examination": {
+          "blood_pressure_mmHg": "124/78",
+          "heart_rate_per_min": 82,
+          "respiratory_rate_per_min": 16,
+          "oxygen_saturation_percent": 97,
+          "temperature_celsius": 36.8,
+          "respiratory_finding": "Scattered expiratory wheeze; no accessory-muscle use"
+        },
+        "investigations": {
+          "fev1_pre_bronchodilator_L": 2.08,
+          "fev1_post_bronchodilator_L": 2.43,
+          "fev1_change_mL": 350,
+          "fev1_percent_change_from_baseline": 16.8,
+          "blood_eosinophils_x10e9_per_L": 0.32,
+          "hba1c_percent": 5.5
+        },
+        "clinical_assessment": "Variable airflow obstruction with bronchodilator reversibility, consistent with the established asthma diagnosis. History of a possible immediate hypersensitivity reaction to amoxicillin; no confirmatory allergy testing available.",
+        "follow_up": "At six-week review, nocturnal symptoms had become infrequent following reassessment of inhaler technique and treatment adherence. Allergy status remained flagged in the shared medication record."
+      },
+      "information_governance": {
+        "disclosure_channels": [
+          "Respiratory record extract to research service",
+          "Clinical summary to respiratory clinician"
+        ],
+        "baseline_assumptions": "The respiratory clinician is presumed already aware of asthma status; no corresponding baseline facts are declared for the research service.",
+        "measured_fields": [
+          "asthma",
+          "drug_allergy"
+        ],
+        "other_clinical_details_not_scored": [
+          "age",
+          "symptoms",
+          "spirometry",
+          "blood eosinophils",
+          "HbA1c",
+          "medication review"
+        ]
+      }
+    },
+    {
+      "case_id": "TP-CL-02",
+      "case_title": "Type 2 diabetes surveillance across clinical and research recipients",
+      "actual_profile": {
+        "diabetes": true,
+        "asthma": false,
+        "drug_allergy": false
+      },
+      "recipient_prior": {
+        "diabetes_clinician": {
+          "diabetes": true
+        },
+        "research_analytics": {}
+      },
+      "releases": [
+        {
+          "recipient": "research_analytics",
+          "facts": {
+            "diabetes": true
+          }
+        },
+        {
+          "recipient": "diabetes_clinician",
+          "facts": {
+            "diabetes": true
+          }
+        },
+        {
+          "recipient": "research_analytics",
+          "facts": {
+            "asthma": false
+          }
+        },
+        {
+          "recipient": "research_analytics",
+          "facts": {
+            "drug_allergy": false
+          }
+        },
+        {
+          "recipient": "diabetes_clinician",
+          "facts": {
+            "drug_allergy": false
+          }
+        },
+        {
+          "recipient": "research_analytics",
+          "facts": {
+            "diabetes": true
+          }
+        }
+      ],
+      "clinical_summary": {
+        "referral_setting": "Diabetes follow-up clinic with quality-improvement analytics",
+        "index_visit": "2026-04-08",
+        "history": "Nine-year history of type 2 diabetes with recent fasting capillary glucose readings above individualized targets. He reported no severe hypoglycaemia, wheeze, prior asthma diagnosis or known medication reaction.",
+        "medication_history": "Metformin and a second glucose-lowering agent, with review of adherence, diet and activity as part of routine care.",
+        "examination": {
+          "blood_pressure_mmHg": "146/86",
+          "heart_rate_per_min": 76,
+          "body_mass_index_kg_m2": 29.4,
+          "foot_examination": "Protective sensation present on bedside assessment; no active ulceration"
+        },
+        "investigations": {
+          "hba1c_percent": 8.2,
+          "fasting_plasma_glucose_mg_dL": 174,
+          "serum_creatinine_mg_dL": 0.98,
+          "egfr_mL_min_1_73m2": 88,
+          "urine_albumin_creatinine_ratio_mg_g": 16
+        },
+        "clinical_assessment": "Type 2 diabetes with glycaemic control above the jointly agreed target at index review. No clinical asthma history or documented drug hypersensitivity.",
+        "follow_up": "A subsequent clinic assessment at approximately three months recorded HbA1c of 7.5% following medication and self-management review; the clinical follow-up values are narrative context rather than variables scored by the privacy engine."
+      },
+      "information_governance": {
+        "disclosure_channels": [
+          "Structured diagnosis to research analytics service",
+          "Allergy and respiratory-history fields to analytics service",
+          "Medication safety fields to diabetes clinician"
+        ],
+        "baseline_assumptions": "The diabetes clinician is presumed to know the diabetes diagnosis; the analytics service begins without declared knowledge of the three evaluated attributes.",
+        "measured_fields": [
+          "diabetes",
+          "asthma",
+          "drug_allergy"
+        ],
+        "other_clinical_details_not_scored": [
+          "HbA1c",
+          "fasting glucose",
+          "creatinine",
+          "eGFR",
+          "urine albumin-creatinine ratio",
+          "medications"
+        ]
+      }
+    },
+    {
+      "case_id": "TP-CL-03",
+      "case_title": "Multimorbidity with recipient-specific baseline knowledge",
+      "actual_profile": {
+        "diabetes": true,
+        "asthma": true,
+        "drug_allergy": true
+      },
+      "recipient_prior": {
+        "pharmacy_service": {
+          "drug_allergy": true
+        },
+        "primary_care": {
+          "diabetes": true
+        },
+        "outcomes_analytics": {}
+      },
+      "releases": [
+        {
+          "recipient": "pharmacy_service",
+          "facts": {
+            "drug_allergy": true
+          }
+        },
+        {
+          "recipient": "pharmacy_service",
+          "facts": {
+            "diabetes": true
+          }
+        },
+        {
+          "recipient": "primary_care",
+          "facts": {
+            "diabetes": true
+          }
+        },
+        {
+          "recipient": "outcomes_analytics",
+          "facts": {
+            "diabetes": true
+          }
+        },
+        {
+          "recipient": "outcomes_analytics",
+          "facts": {
+            "asthma": true
+          }
+        },
+        {
+          "recipient": "outcomes_analytics",
+          "facts": {
+            "asthma": true
+          }
+        },
+        {
+          "recipient": "primary_care",
+          "facts": {
+            "drug_allergy": true
+          }
+        }
+      ],
+      "clinical_summary": {
+        "referral_setting": "Integrated primary care, pharmacy medication reconciliation and outcomes analysis",
+        "index_visit": "2026-05-19",
+        "history": "Coexisting type 2 diabetes and persistent asthma, with intermittent exertional dyspnoea and a previous urticarial eruption after penicillin-class antibiotic exposure. She attended for medication reconciliation after a transition between clinical services.",
+        "medication_history": "Glucose-lowering therapy and an inhaled controller regimen; the antibiotic reaction was retained as an alert in the pharmacy record.",
+        "examination": {
+          "blood_pressure_mmHg": "132/80",
+          "heart_rate_per_min": 78,
+          "oxygen_saturation_percent": 96,
+          "body_mass_index_kg_m2": 27.8,
+          "respiratory_finding": "Mild bilateral expiratory wheeze without acute distress"
+        },
+        "investigations": {
+          "hba1c_percent": 7.6,
+          "egfr_mL_min_1_73m2": 62,
+          "fev1_pre_bronchodilator_L": 1.51,
+          "fev1_percent_predicted": 68
+        },
+        "clinical_assessment": "Type 2 diabetes and asthma requiring coordinated review. Historical urticaria following penicillin exposure remains a possible drug-allergy signal, pending assessment of the original reaction.",
+        "follow_up": "Following reconciliation, the allergy alert and chronic-disease diagnoses were available to the relevant clinical services. The analytics service was assessed separately because its documented prior information differed from clinical recipients."
+      },
+      "information_governance": {
+        "disclosure_channels": [
+          "Pharmacy reconciliation record",
+          "Primary care problem list",
+          "Outcomes analytics extract"
+        ],
+        "baseline_assumptions": "The pharmacy service already has the allergy alert; primary care already knows the diabetes diagnosis; the outcomes analytics service has no declared baseline facts.",
+        "measured_fields": [
+          "diabetes",
+          "asthma",
+          "drug_allergy"
+        ],
+        "other_clinical_details_not_scored": [
+          "eGFR",
+          "HbA1c",
+          "spirometry",
+          "vital signs",
+          "medication regimen"
+        ]
+      }
+    }
+  ]
+}

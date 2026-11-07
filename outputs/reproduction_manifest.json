@@ -1,0 +1,12 @@
+{
+  "clinical_case_analyses": 3,
+  "disclosure_events": 8,
+  "engine_version": "0.6.0",
+  "events_flagged_for_preference_review": 2,
+  "machine_readable_analysis": "enhanced_analysis.json",
+  "patient_statement": "patient_disclosure_statement.html",
+  "project": "TwinPrivacy",
+  "receipt_anchor": "trusted_receipt_anchor.txt",
+  "receipt_chain_verification": "PASS",
+  "receiving_organizations": 3
+}
